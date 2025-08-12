@@ -20,6 +20,8 @@ function addTask(){
     saveData();
 }
 
+// check and delete the list component
+
 listContainer.addEventListener("click",function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
@@ -31,6 +33,7 @@ listContainer.addEventListener("click",function(e){
     }
 },false);
 
+// Adding the local storage
 function saveData(){
     localStorage.setItem("data", listContainer.innerHTML)
 }
